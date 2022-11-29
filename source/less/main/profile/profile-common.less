@@ -13,35 +13,6 @@
   margin: 0;
 }
 
-.profile__list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.profile__wrapper {
-  display: flex;
-}
-
-.profile__item-title {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
-  text-transform: uppercase;
-  color: #444444;
-}
-
-.profile_type-field::placeholder,
-.profile_type-field {
-  font-family: "Oswald", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
-  color: #444444;
-  text-transform: uppercase;
-}
-
 .inner-title {
   font-weight: 400;
   font-size: 24px;
@@ -49,18 +20,23 @@
   color: #000000;
 }
 
-.profile__address {
-  font-style: normal;
+.profile__item-title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: @dark-grey;
 }
 
-.profile__addition-item {
-  .title-bold {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 18px;
-    text-transform: uppercase;
-    color: #000000;
-  }
+.profile_type-field::placeholder,
+.profile_type-field {
+  font-family: "Oswald", "Tahoma", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: @dark-grey;
+  text-transform: uppercase;
 }
 
 .title-bold {
@@ -71,14 +47,8 @@
   color: #222222;
 }
 
-.profile__addition-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.profile__fields {
-  font-family: "Lato", sans-serif;
+.profile__important-fields {
+  font-family: @font-lato;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
