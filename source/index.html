@@ -102,12 +102,12 @@
     </section>
     <section class="example">
       <h2 class="example__title">Живой пример</h2>
+      <p class="example__description description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на
+        Cat Energy Slim.<br>
+        Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-<br>
+        прежнему спит по 16 часов в день.
+      </p>
       <div class="example__wrapper">
-        <p class="example__description description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на
-          Cat Energy Slim.<br>
-          Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-<br>
-          прежнему спит по 16 часов в день.
-        </p>
         <div class="example__stats">
           <div class="example__stats-item">
             <span class="example__stats-title">5 КГ</span>
@@ -123,12 +123,18 @@
           </div>
         </div>
         <div class="example__picture">
-          <ul class="example__picture-list">
-            <li class="example__picture-item">
-              <img src="" alt="Толстый кот.">
+          <ul class="example__picture-list slider">
+            <li class="example__picture-item slide-before">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/desktop-fat-cat.png">
+                <img src="img/mobile-fat-cat.png" alt="Толстый Борис.">
+              </picture>
             </li>
-            <li class="example__item">
-              <img src="" alt="Худой кот.">
+            <li class="example__item slide-after">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/desktop-thin-cat.png">
+                <img src="img/mobile-thin-cat.png" alt="Худой Борис.">
+              </picture>
             </li>
           </ul>
         </div>

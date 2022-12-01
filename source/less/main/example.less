@@ -9,6 +9,14 @@
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 124px 124px;
+    align-items: center;
+    justify-items: center;
+  }
+}
+
+.example__wrapper {
+  @media (min-width: @desktop-width) {
+    display: flex;
   }
 }
 
@@ -46,8 +54,23 @@
   margin: 0;
 }
 
-.example__picture-list {
+.slider {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  position: relative;
+  width: 280px;
+  height: 256px;
+
+  @media (min-width: @tablet-width) {
+    width: 560px;
+    height: 512px;
+  }
+}
+
+.slide-before,
+.slide-after {
+  position: absolute;
+  width: inherit;
+  height: inherit;
 }
