@@ -12,28 +12,37 @@
 <body class="page-body">
   <header class="main-header">
     <div class="main-header__wrapper">
-      <div class="wrapper-logo">
+      <div class="logo-wrapper">
         <a href="#" class="logo">
-          <img src="images/logo-mobile.svg" alt="Cat energy logo.">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="images/logo-tablet.svg">
+            <img src="images/logo-mobile.svg" alt="Cat energy logo.">
+          </picture>
         </a>
         <a href="#" class="logo-text">
-          <img src="images/logo-mobile-text.svg" alt="Cat energy.">
+          <img src="images/logo-text-mobile.svg" alt="Cat energy.">
         </a>
       </div>
-      <nav class="main-nav">
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Главная</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-link-current" href="#">Каталог продукции</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="main-nav__toggle">
+        <span class="main-nav__bar"></span>
+        <span class="main-nav__bar"></span>
+        <span class="main-nav__bar"></span>
+      </div>
     </div>
+    <nav class="main-nav main-nav--closed main-nav--nojs">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Главная</a>
+        </li>
+        <li class="nav-item nav-item-current">
+          <a class="nav-link" href="#">Каталог продукции</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="form.html">Подбор программы</a>
+        </li>
+      </ul>
+    </nav>
   </header>
   <main class="catalog">
     <section class="products">
@@ -275,7 +284,7 @@
     </iframe>
     <div class="main-footer__wrapper">
       <a href="#" class="logo-text">
-        <img src="images/logo-mobile-text.svg" alt="Cat energy.">
+        <img src="images/logo-text.svg" alt="Cat energy.">
       </a>
       <ul class="main-footer__social social">
         <li class="social-item">
@@ -318,4 +327,23 @@
       </div>
     </div>
   </footer>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.main-nav__toggle').click(function () {
+        $('.nav-list').slideToggle(200, function () {
+          if ($(this).is(':hidden')) {
+            $('.main-nav__toggle').addClass('main-nav__toggle-anim-out');
+            $('.main-nav__toggle').removeClass('main-nav__toggle-anim-in');
+          } else {
+            $('.main-nav__toggle').addClass('main-nav__toggle-anim-in');
+            $('.main-nav__toggle').removeClass('main-nav__toggle-anim-out');
+          }
+        });
+        return false;
+      });
+    });
+  </script>
 </body>
+
+</html>

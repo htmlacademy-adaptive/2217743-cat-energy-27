@@ -1,8 +1,14 @@
+.advantages {
+  padding: 20px;
+  padding-bottom: 53px;
+}
+
 .advantages__title {
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
   margin: 0;
+  margin-bottom: 42px;
 }
 
 .advantages__list {
@@ -21,5 +27,17 @@
 }
 
 .advantages__item {
-  margin: 10px;
+  &:not(:last-child) {
+    margin-bottom: 26px;
+  }
+}
+
+.advantages__item-description {
+  font-size: 14px;
+  line-height: 18px;
+  margin-left: 80px;
+
+  br {
+    display: none;
+  }
 }

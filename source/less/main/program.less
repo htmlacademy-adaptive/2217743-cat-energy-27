@@ -1,3 +1,7 @@
+.program {
+  padding: 0 20px;
+}
+
 .program__wrapper {
   display: flex;
   flex-direction: column;
@@ -7,12 +11,36 @@
   }
 }
 
+.program__weight {
+  background-color: #f2f2f2;
+  padding: 21px 20px 18px 20px;
+
+  br {
+    display: none;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 19px;
+  }
+}
+
 .program__title {
   font-weight: 400;
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
   margin: 0;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  margin-left: 71px;
+}
+
+.program__description {
+  margin-bottom: 20px;
+}
+
+.program__weight-line {
+  margin-bottom: 15px;
 }
 
 .program__link {
@@ -22,4 +50,5 @@
   line-height: 16px;
   text-transform: uppercase;
   color: #000000;
+  padding: 4px 47px 4px 0;
 }

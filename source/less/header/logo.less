@@ -1,13 +1,25 @@
-.wrapper-logo {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
 .logo {
   text-decoration: none;
 }
 
 .logo-text {
   text-decoration: none;
+
+  picture {
+    display: flex;
+  }
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 55px;
+
+  @media (min-width: @tablet-width) {
+    gap: 11px;
+  }
+
+  @media (min-width: @desktop-width) {
+    gap: 13px;
+  }
 }

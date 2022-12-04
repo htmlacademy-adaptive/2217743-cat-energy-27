@@ -12,28 +12,40 @@
 <body class="page-body">
   <header class="main-header">
     <div class="main-header__wrapper">
-      <div class="wrapper-logo">
+      <div class="logo-wrapper">
         <a href="#" class="logo">
-          <img src="images/logo-mobile.svg" alt="Cat energy logo.">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="images/logo-tablet.svg">
+            <img src="images/logo-mobile.svg" alt="Cat energy logo.">
+          </picture>
         </a>
         <a href="#" class="logo-text">
-          <img src="images/logo-mobile-text.svg" alt="Cat energy.">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="images/logo-text.svg">
+            <img src="images/logo-text-mobile.svg" alt="Cat energy.">
+          </picture>
         </a>
       </div>
-      <nav class="main-nav">
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a class="nav-link nav-link-current" href="#">Главная</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="main-nav__toggle">
+        <span class="main-nav__bar"></span>
+        <span class="main-nav__bar"></span>
+        <span class="main-nav__bar"></span>
+      </div>
     </div>
+    <nav class="main-nav main-nav--closed main-nav--nojs">
+      <ul class="nav-list">
+        <li class="nav-item nav-item-current">
+          <a class="nav-link" href="#">Главная</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="catalog.html">Каталог продукции</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="form.html">Подбор программы</a>
+        </li>
+      </ul>
+    </nav>
   </header>
   <main class="main-container">
     <section class="intro">
@@ -52,6 +64,7 @@
             Пора на диету! Cat Energy Slim поможет<br>
             вашему питомцу сбросить лишний вес.
           </p>
+          <hr class="program__weight-line">
           <a class="program__link" href="catalog.html">Каталог Slim</a>
         </div>
         <div class="program__weight program__weight-up">
@@ -61,6 +74,7 @@
             и даже собак? Серия Cat Energy Pro поможет<br>
             вашему коту нарастить необходимые мышцы!
           </p>
+          <hr class="program__weight-line line">
           <a class="program__link" href="catalog.html">Каталог pro</a>
         </div>
       </div>
@@ -102,20 +116,20 @@
     </section>
     <section class="example">
       <h2 class="example__title">Живой пример</h2>
-      <p class="example__description description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на
-        Cat Energy Slim.<br>
-        Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-<br>
-        прежнему спит по 16 часов в день.
-      </p>
       <div class="example__wrapper">
+        <p class="example__description description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на
+          Cat Energy Slim.<br>
+          Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-<br>прежнему
+          спит по 16 часов в день.
+        </p>
         <div class="example__stats">
           <div class="example__stats-item">
             <span class="example__stats-title">5 КГ</span>
-            <p class="example__stats-text">снижение веса</p>
+            <p class="example__stats-text">снижение<br>веса</p>
           </div>
           <div class="example__stats-item">
             <span class="example__stats-title">60 ДНЕЙ</span>
-            <p class="example__stats-text">затрачено времени</p>
+            <p class="example__stats-text">затрачено<br>времени</p>
           </div>
           <div class="example__stats-item">
             <p class="example__stats-expenses">Затраты на питание:</p>
@@ -123,18 +137,21 @@
           </div>
         </div>
         <div class="example__picture">
-          <ul class="example__picture-list slider">
-            <li class="example__picture-item slide-before">
+          <ul class="example__picture-list slider-container">
+            <li class="example__picture-item view-after">
               <picture>
                 <source media="(min-width: 768px)" srcset="img/desktop-fat-cat.png">
                 <img src="img/mobile-fat-cat.png" alt="Толстый Борис.">
               </picture>
             </li>
-            <li class="example__item slide-after">
+            <li class="example__picture-item view-before">
               <picture>
                 <source media="(min-width: 768px)" srcset="img/desktop-thin-cat.png">
                 <img src="img/mobile-thin-cat.png" alt="Худой Борис.">
               </picture>
+            </li>
+            <li class="toggle-drag">
+              <div class="drag-circle"></div>
             </li>
           </ul>
         </div>
@@ -153,16 +170,18 @@
             Санкт-Петербург
           </address>
         </div>
+        <iframe class="main-footer__map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533248!2d30.320858716344713!3d59.93871648187619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1669199079262!5m2!1sru!2sru"
+          height="362" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </section>
-      <iframe class="main-footer__map"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533248!2d30.320858716344713!3d59.93871648187619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1669199079262!5m2!1sru!2sru"
-        width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
       <div class="main-footer__wrapper">
         <a href="#" class="logo-text">
-          <img src="images/logo-mobile-text.svg" alt="Cat energy.">
+          <picture>
+            <img src="images/logo-text.svg" alt="Cat energy.">
+          </picture>
         </a>
+        <hr class="main-footer__line-first">
         <ul class="main-footer__social social">
           <li class="social-item">
             <a href="#" class="social-link">
@@ -192,6 +211,7 @@
             </a>
           </li>
         </ul>
+        <hr class="main-footer__line-second">
         <div class="main-footer__copyright copyright">
           <span class="copyright-text">HTML Academy</span>
           <a class="copyright-link" href="#">
@@ -205,6 +225,26 @@
       </div>
     </footer>
   </main>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.main-nav__toggle').click(function () {
+        $('.nav-list').slideToggle(200, function () {
+          if ($(this).is(':hidden')) {
+            $('.main-nav__toggle').addClass('main-nav__toggle-anim-out');
+            $('.main-nav__toggle').removeClass('main-nav__toggle-anim-in');
+          } else {
+            $('.main-nav__toggle').addClass('main-nav__toggle-anim-in');
+            $('.main-nav__toggle').removeClass('main-nav__toggle-anim-out');
+          }
+        });
+        return false;
+      });
+    });
+
+  </script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
