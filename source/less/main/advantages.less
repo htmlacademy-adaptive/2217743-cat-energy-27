@@ -1,6 +1,6 @@
 .advantages {
   padding: 20px;
-  padding-bottom: 53px;
+  padding-bottom: 50px;
 }
 
 .advantages__title {
@@ -8,7 +8,7 @@
   font-size: 36px;
   line-height: 40px;
   margin: 0;
-  margin-bottom: 42px;
+  margin-bottom: 40px;
 }
 
 .advantages__list {
@@ -27,8 +27,10 @@
 }
 
 .advantages__item {
+  padding: 3px 0;
+
   &:not(:last-child) {
-    margin-bottom: 26px;
+    margin-bottom: 20px;
   }
 }
 
@@ -40,4 +42,26 @@
   br {
     display: none;
   }
+}
+
+.back-image(@image) {
+  background-image: @image;
+  background-repeat: no-repeat;
+  background-size: 60px 60px;
+}
+
+.advantages__item:first-child {
+  .back-image(url("/img/adv-leaf.jpg"));
+}
+
+.advantages__item:nth-child(2) {
+  .back-image(url("/img/adv-powder.jpg"));
+}
+
+.advantages__item:nth-child(3) {
+  .back-image(url("/img/adv-eat.jpg"));
+}
+
+.advantages__item:last-child {
+  .back-image(url("/img/adv-clock.jpg"));
 }

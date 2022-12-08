@@ -63,7 +63,10 @@
 .nav-item {
   cursor: pointer;
   padding: 21px 10px 24px;
-  border-top: 1px solid #e6e6e6;
+
+  &:not(:first-child) {
+    border-top: 1px solid #cdcdcd;
+  }
 
   @media (min-width: @tablet-width) {
     border: none;

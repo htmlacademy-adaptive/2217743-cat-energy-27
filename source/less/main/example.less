@@ -7,6 +7,7 @@
   display: grid;
   grid-template-columns: 124px 124px;
   justify-content: space-between;
+  row-gap: 20px;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -23,7 +24,8 @@
 .example__wrapper {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 33px;
+  margin-bottom: 20px;
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
@@ -32,11 +34,21 @@
 
 .example__stats-item {
   text-align: center;
+  position: relative;
 
   &:last-child {
     grid-column: -1 / 1;
-    display: flex;
-    justify-content: center;
+  }
+
+  &:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    width: 121px;
+    height: 54px;
+    border: 1px solid #cdcdcd;
+    border-radius: 3px;
+    left: 0;
+    top: -14px;
   }
 }
 
@@ -61,13 +73,18 @@
 }
 
 .example__stats-text {
+  overflow-wrap: anywhere;
   font-family: @font-lato;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 12px;
   color: @dark-grey;
-  margin: 0;
+  margin: 0 auto;
+  position: relative;
+  background-color: #eaeaea;
+  width: 87px;
+  margin-top: 5px;
 }
 
 .example__stats-expenses {
@@ -84,9 +101,14 @@
   list-style: none;
   overflow: hidden;
   position: relative;
-  width: 100%;
+  width: 280px;
   height: 256px;
   box-sizing: border-box;
+}
+
+.example__picture {
+  display: flex;
+  align-items: center;
 }
 
 .example__picture-item {
@@ -116,7 +138,7 @@
   width: 4px;
   height: 100%;
   top: 0;
-  left: min(32vh, 45vw);
+  left: 138px;
   background: #666666;
   border-radius: 2px;
   cursor: pointer;
@@ -125,11 +147,11 @@
 
 .drag-circle {
   position: absolute;
-  top: calc(50% - 20px);
+  top: calc(50% - 22px);
   left: -20px;
   border-radius: 100%;
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   background: #ffffff;
   border: 2px solid #666666;
   cursor: pointer;

@@ -54,39 +54,41 @@
         программу питания для вашего кота</p>
       <form action="https://echo.htmlacademy.ru" method="post" class="profile__form">
         <div class="profile__wrapper">
-          <ul class="profile__list">
+          <ul class="profile__list profile__list-first">
             <li class="profile__item">
-              <label class="profile__item-title">Имя:*
-                <input type="text" class="profile_type-field" required name="name" placeholder="Барсик">
+              <span class="profile__item-title">Имя:*</span>
+              <label class="profile__item-title">
+                <input type="text" class="profile__type-field profile__wrapper-field field-name" required name="name"
+                  placeholder="Барсик">
               </label>
             </li>
             <li class="profile__item">
-              <label class="profile__item-title">Вес (кг):*
-                <input type="number" class="profile_type-field" required name="weight" placeholder="7">
+              <span class="profile__item-title">Вес (кг):*</span>
+              <label class="profile__item-title">
+                <input type="number" class="profile__type-field profile__wrapper-field field-weight" required
+                  name="weight" placeholder="7">
               </label>
             </li>
             <li class="profile__item">
-              <label class="profile__item-title">Возраст (лет):
-                <input type="number" class="profile_type-field" required name="Years old" placeholder="7">
+              <span class="profile__item-title">Возраст (лет):</span>
+              <label class="profile__item-title">
+                <input type="number" class="profile__type-field profile__wrapper-field field-old" required
+                  name="Years old" placeholder="7">
               </label>
             </li>
           </ul>
-          <ul class="profile__list">
+          <ul class="profile__list profile__list-second">
             <li class="profile__item">
-              <label class="profile__item-title title-bold">
-                <input type="radio" class="control-input" name="purpose" value="похудение" checked>похудение
-              </label>
+              <input type="radio" class="control-input" id="weight-lose" name="purpose" value="похудение" checked>
+              <label class="profile__item-title title-bold" for="weight-lose">похудение</label>
             </li>
             <li class="profile__item">
-              <label class="profile__item-title title-bold">
-                <input type="radio" class="control-input" name="purpose" value="набор массы">набор массы
-              </label>
+              <input type="radio" class="control-input" id="weight-up" name="purpose" value="набор массы">
+              <label class="profile__item-title title-bold" for="weight-up">набор массы</label>
             </li>
             <li class="profile__item">
-              <label class="profile__item-title title-bold">
-                <input type="radio" class="control-input" name="purpose" value="Не знаю (Нужен ваш совет)">Не знаю
-                (Нужен ваш совет)
-              </label>
+              <input type="radio" class="control-input" id="idk" name="purpose" value="Не знаю (Нужен ваш совет)">
+              <label class="profile__item-title title-bold" for="idk">Не знаю (Нужен ваш совет)</label>
             </li>
           </ul>
         </div>
@@ -94,17 +96,19 @@
           <h2 class="profile__contacts-title inner-title">Контактные данные (владельца кота)</h2>
           <address class="profile__address">
             <label class="profile__item-title">E-mail:*
-              <input type="email" class="profile_type-field" required name="email" placeholder="кuklachev@gmail.com">
+              <input type="email" class="profile__type-field field-mail" required name="email"
+                placeholder="кuklachev@gmail.com">
             </label>
             <label class="profile__item-title">Телефон:*
-              <input type="text" class="profile_type-field" required name="phone" placeholder="8 (960) 900-60-90">
+              <input type="text" class="profile__type-field field-phone" required name="phone"
+                placeholder="8 (960) 900-60-90">
             </label>
           </address>
         </div>
         <div class="profile__comment">
           <h2 class="profile__comment-title inner-title">Комментарий</h2>
           <label>
-            <textarea class="profile_type-field" name="comment" cols="100" rows="10"
+            <textarea class="profile__type-field field-comment" name="comment" cols="100" rows="10"
               placeholder="Расскажите обо всех повадках кота"></textarea>
           </label>
         </div>
@@ -112,24 +116,20 @@
           <h2 class="profile__addition-title inner-title">Дополнительно</h2>
           <ul class="profile__addition-list">
             <li class="profile__addition-item">
-              <label class="profile__item-title title-bold">
-                <input type="checkbox" name="сахарозаменитель" class="control-input" checked>
-                сахарозаменитель</label>
+              <input type="checkbox" name="сахарозаменитель" id="sweetener" class="control-input" checked>
+              <label class="profile__item-title title-bold" for="sweetener">сахарозаменитель</label>
             </li>
             <li class="profile__addition-item">
-              <label class="profile__item-title title-bold">
-                <input type="checkbox" name="питьевая вода" class="control-input">
-                питьевая вода</label>
+              <input type="checkbox" name="питьевая вода" id="water" class="control-input">
+              <label class="profile__item-title title-bold" for="water">питьевая вода</label>
             </li>
             <li class="profile__addition-item">
-              <label class="profile__item-title title-bold">
-                <input type="checkbox" name="молоко" class="control-input">
-                молоко</label>
+              <input type="checkbox" name="молоко" id="milk" class="control-input">
+              <label class="profile__item-title title-bold" for="milk">молоко</label>
             </li>
             <li class="profile__addition-item">
-              <label class="profile__item-title title-bold">
-                <input type="checkbox" name="витамины" class="control-input">
-                витамины</label>
+              <input type="checkbox" name="витамины" id="vitamins" class="control-input">
+              <label class="profile__item-title title-bold" for="vitamins">витамины</label>
             </li>
           </ul>
         </div>
@@ -151,16 +151,18 @@
           Санкт-Петербург
         </address>
       </div>
+      <iframe class="main-footer__map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533248!2d30.320858716344713!3d59.93871648187619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1669199079262!5m2!1sru!2sru"
+        height="362" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </section>
-    <iframe class="main-footer__map"
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533248!2d30.320858716344713!3d59.93871648187619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1669199079262!5m2!1sru!2sru"
-      width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
     <div class="main-footer__wrapper">
       <a href="#" class="logo-text">
-        <img src="images/logo-text.svg" alt="Cat energy.">
+        <picture>
+          <img src="images/logo-text.svg" alt="Cat energy.">
+        </picture>
       </a>
+      <hr class="main-footer__line-first">
       <ul class="main-footer__social social">
         <li class="social-item">
           <a href="#" class="social-link">
@@ -190,6 +192,7 @@
           </a>
         </li>
       </ul>
+      <hr class="main-footer__line-second">
       <div class="main-footer__copyright copyright">
         <span class="copyright-text">HTML Academy</span>
         <a class="copyright-link" href="#">
@@ -218,6 +221,7 @@
         return false;
       });
     });
+
   </script>
 </body>
 
