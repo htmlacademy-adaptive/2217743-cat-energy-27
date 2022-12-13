@@ -5,6 +5,35 @@
   background-repeat: no-repeat;
   position: relative;
   background-size: 100%;
+
+  @media (min-width: 425px) {
+    background-image: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 33px 30px 0;
+    min-height: 810px;
+    background-image: url("/img/index-cat-energy-tablet.png");
+    background-position: bottom;
+    background-size: 709px 609px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: none;
+    min-height: 492px;
+    margin-bottom: 82px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 552px;
+      height: 499px;
+      top: -27px;
+      left: calc(40% - 18px);
+      background-image: url("/img/index-cat-energy-desktop.png");
+      background-repeat: no-repeat;
+    }
+  }
 }
 
 .intro__image {
@@ -19,6 +48,17 @@
   background-image: url("/img/index-cat-energy.png");
   background-repeat: no-repeat;
   background-position: 50% 77%;
+
+  @media (min-width: @tablet-width) {
+    align-items: flex-start;
+    padding: 0 90px;
+    background-image: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 30vw;
+    padding: 22px 160px;
+  }
 }
 
 .intro__title {
@@ -30,6 +70,25 @@
   text-align: center;
   color: #ffffff;
   z-index: 1;
+
+  @media (min-width: 425px) {
+    color: #000000;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 60px;
+    color: #000000;
+    margin-bottom: 41px;
+    text-align: start;
+    margin-left: -4px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+    margin-bottom: 39px;
+  }
 }
 
 .intro__slogan {
@@ -41,6 +100,23 @@
   margin-bottom: 300px;
   color: #ffffff;
   z-index: 1;
+
+  @media (min-width: 425px) {
+    color: #000000;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+    margin-bottom: 49px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+    margin-bottom: 52px;
+  }
 }
 
 .intro__button {
@@ -49,4 +125,12 @@
   line-height: 18px;
   width: 280px;
   min-height: 40px;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    width: 244px;
+    height: 54px;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

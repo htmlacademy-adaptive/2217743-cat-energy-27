@@ -3,11 +3,17 @@
   flex-direction: column;
   align-items: center;
   padding: 35px 20px 22px;
+  flex-wrap: wrap;
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 51px 30px 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 51px 110px 55px;
   }
 
   .logo-text img {
@@ -20,9 +26,17 @@
   width: 100%;
   margin: 25px 0 20px;
   color: rgba(217, 217, 217, 1);
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .main-footer__line-second {
   width: 100%;
   margin: 13px 0 22px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }

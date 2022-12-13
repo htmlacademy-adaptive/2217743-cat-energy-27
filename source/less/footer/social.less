@@ -7,6 +7,20 @@
   justify-content: space-between;
   gap: 10px;
   flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 155px;
+    margin-right: 128px;
+  }
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+}
+
+.social-link {
+  display: flex;
 }
 
 .copyright-text {
@@ -23,6 +37,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+    gap: 24px;
+  }
 }
 
 .copyright-link {

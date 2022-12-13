@@ -10,6 +10,10 @@
   top: 66px;
   z-index: 2;
   width: 100%;
+
+  @media (min-width: @desktop-width) {
+    background-color: transparent;
+  }
 }
 
 .main-nav--opened .nav-list {
@@ -50,13 +54,24 @@
     font-size: 18px;
     line-height: 24px;
     overflow-wrap: normal;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 0;
   }
+}
 
+.main-nav-index .nav-link {
   @media (min-width: @desktop-width) {
     font-size: 20px;
     line-height: 30px;
+    color: #ffffff;
+    padding: 7px 0;
+  }
+}
+
+.main-nav-index .nav-item {
+  &-current {
+    @media (min-width: @desktop-width) {
+      border-bottom: 1px solid #ffffff;
+    }
   }
 }
 
@@ -66,6 +81,10 @@
 
   &:not(:first-child) {
     border-top: 1px solid #cdcdcd;
+
+    @media (min-width: @tablet-width) {
+      border-top: none;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -79,15 +98,23 @@
 
     &:not(:last-child) {
       margin-right: 39px;
+
+      @media (min-width: @desktop-width) {
+        margin-right: 34px;
+      }
     }
 
     &:first-child {
       margin-right: 34px;
+
+      @media (min-width: @desktop-width) {
+        margin-right: 36px;
+      }
     }
   }
 }
 
-.main-nav__toggle {
+.main-header__toggle {
   cursor: pointer;
   width: 24px;
   height: 24px;
@@ -98,7 +125,7 @@
   }
 }
 
-.main-nav__bar {
+.main-header__bar {
   position: absolute;
   display: block;
   width: 24px;
@@ -151,7 +178,7 @@
   }
 }
 
-.main-nav__toggle-anim-in .main-nav__bar {
+.main-header__toggle-anim-in .main-header__bar {
   &:first-child {
     animation: burger-bar1 200ms ease-in-out forwards;
   }
@@ -197,7 +224,7 @@
   }
 }
 
-.main-nav__toggle-anim-out .main-nav__bar {
+.main-header__toggle-anim-out .main-header__bar {
   &:first-child {
     animation: burger-bar1-out 200ms ease-in-out forwards;
     animation-direction: reverse;
