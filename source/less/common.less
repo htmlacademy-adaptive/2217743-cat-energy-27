@@ -34,14 +34,21 @@ body {
 .button {
   font-family: "Oswald", "Tahoma", sans-serif;
   font-style: normal;
-  background: #68b738;
   text-transform: uppercase;
+  cursor: pointer;
   color: #ffffff;
   border: none;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   padding: 8px;
+  transition: 0.3s;
+  background: linear-gradient(to left, #68b738 50%, #5eaa2f 50%) right;
+  background-size: 200%;
+
+  &:hover {
+    background-position: left;
+  }
 }
 
 .description {

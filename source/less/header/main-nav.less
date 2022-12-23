@@ -11,8 +11,14 @@
   z-index: 2;
   width: 100%;
 
+  @media (min-width: @tablet-width) {
+    width: 440px;
+    justify-content: space-between;
+  }
+
   @media (min-width: @desktop-width) {
     background-color: transparent;
+    width: 480px;
   }
 }
 
@@ -56,21 +62,51 @@
     overflow-wrap: normal;
     padding: 10px 0;
   }
-}
 
-.main-nav-index .nav-link {
   @media (min-width: @desktop-width) {
     font-size: 20px;
     line-height: 30px;
-    color: #ffffff;
     padding: 7px 0;
   }
 }
 
+.main-nav-index .nav-link {
+  @media (min-width: @desktop-width) {
+    color: #ffffff;
+  }
+}
+
 .main-nav-index .nav-item {
-  &-current {
-    @media (min-width: @desktop-width) {
-      border-bottom: 1px solid #ffffff;
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    &::after {
+      content: "";
+      width: 100%;
+      scale: 0;
+      position: absolute;
+      height: 2px;
+      bottom: 0;
+      background-color: #ffffff;
+      transition: 0.3s;
+    }
+
+    &:hover {
+      &::after {
+        scale: 1;
+      }
+    }
+
+    &-current {
+      &::after {
+        content: "";
+        width: 100%;
+        scale: 1;
+        position: absolute;
+        height: 2px;
+        bottom: 0;
+        background-color: #ffffff;
+      }
     }
   }
 }
@@ -78,6 +114,8 @@
 .nav-item {
   cursor: pointer;
   padding: 21px 10px 24px;
+  position: relative;
+  transform-origin: right;
 
   &:not(:first-child) {
     border-top: 1px solid #cdcdcd;
@@ -89,24 +127,46 @@
 
   @media (min-width: @tablet-width) {
     border: none;
-    border-bottom: 2px solid fade(#68b738, 0%);
     padding: 0;
 
+    &::after {
+      content: "";
+      width: 100%;
+      scale: 0;
+      position: absolute;
+      height: 2px;
+      bottom: 0;
+      background-color: #68b738;
+      transition: 0.3s;
+    }
+
+    &:hover:not(.nav-item-current) {
+      &::after {
+        scale: 1;
+      }
+    }
+
     &-current {
-      border-bottom: 2px solid #68b738;
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 100%;
+        scale: 1;
+        position: absolute;
+        height: 2px;
+        bottom: 0;
+        background-color: #68b738;
+      }
     }
 
     &:not(:last-child) {
-      margin-right: 39px;
-
       @media (min-width: @desktop-width) {
         margin-right: 34px;
       }
     }
 
     &:first-child {
-      margin-right: 34px;
-
       @media (min-width: @desktop-width) {
         margin-right: 36px;
       }
