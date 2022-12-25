@@ -17,6 +17,18 @@
 .social-item {
   display: flex;
   align-items: center;
+
+  path {
+    transition: 0.2s;
+  }
+
+  &:hover path {
+    fill: #68b738;
+  }
+
+  &:active path {
+    fill: rgba(105, 183, 56, 0.5);
+  }
 }
 
 .social-link {
@@ -37,6 +49,20 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
+
+  path {
+    transition: 0.2s;
+  }
+
+  &:hover path {
+    fill: #68b738;
+  }
+
+  &:active span,
+  &:active path {
+    opacity: 0.5;
+  }
 
   @media (min-width: @tablet-width) {
     width: auto;

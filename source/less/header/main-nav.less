@@ -14,6 +14,7 @@
   @media (min-width: @tablet-width) {
     width: 440px;
     justify-content: space-between;
+    position: static;
   }
 
   @media (min-width: @desktop-width) {
@@ -24,24 +25,23 @@
 
 .main-nav--opened .nav-list {
   display: block;
-}
-
-.main-nav--nojs .nav-list {
-  position: fixed;
-
-  @media (min-width: @tablet-width) {
-    position: static;
-  }
+  position: absolute;
 }
 
 .main-nav--closed .nav-list {
   display: none;
+  position: absolute;
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    position: static;
   }
+}
+
+.main-nav--nojs .nav-list {
+  display: block;
 }
 
 .nav-link {
@@ -70,13 +70,13 @@
   }
 }
 
-.main-nav-index .nav-link {
+.main-nav--index .nav-link {
   @media (min-width: @desktop-width) {
     color: #ffffff;
   }
 }
 
-.main-nav-index .nav-item {
+.main-nav--index .nav-item {
   position: relative;
 
   @media (min-width: @desktop-width) {

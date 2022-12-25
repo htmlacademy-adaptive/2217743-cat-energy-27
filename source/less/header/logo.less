@@ -14,6 +14,7 @@
   display: flex;
   align-items: center;
   gap: 55px;
+  transition: 0.2s;
 
   @media (min-width: @tablet-width) {
     gap: 11px;
@@ -22,4 +23,12 @@
   @media (min-width: @desktop-width) {
     gap: 13px;
   }
+}
+
+.logo-wrapper:hover {
+  opacity: 0.8;
+}
+
+.logo-wrapper:active {
+  opacity: 0.6;
 }
