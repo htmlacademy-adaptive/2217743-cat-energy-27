@@ -1,0 +1,31 @@
+.nutritional-value {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  grid-column: 2 / 3;
+}
+
+.nutritional-value__item {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 7px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #cdcdcd;
+  }
+}
+
+.nutritional-value__text {
+  font-family: @font-lato;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: @dark-grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}

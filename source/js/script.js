@@ -1,27 +1,19 @@
-(function ($) {
-  var $dragMe = $(".slider-container__toggle-drag"),
-    $container = $(".slider-container"),
-    $viewAfter = $(".slider-container__view-after");
-  $dragMe.draggable({
-    containment: "parent",
-    drag: function () {
-      $viewAfter.css({
-        width: parseFloat($(this).css('left')) + 3
-      });
-    }
-  });
-  $container.on("click", function (event) {
-    var eventLeft = event.pageX - $container.offset().left - 15;
-    animateTo(eventLeft);
-  });
-  animateTo("50%");
+let navMain = document.querySelector('.main-nav');
+let navToggle = document.querySelector('.main-header__toggle');
 
-  function animateTo(_left) {
-    $dragMe.animate({
-      left: _left
-    }, 'slow', 'linear');
-    $viewAfter.animate({
-      width: _left
-    }, 'slow', 'linear');
+navMain.classList.remove('main-nav--nojs');
+navMain.classList.add('main-nav--closed');
+
+navToggle.addEventListener('click', function () {
+  if (navMain.classList.contains('main-nav--closed')) {
+    navMain.classList.remove('main-nav--closed');
+    navMain.classList.add('main-nav--opened');
+    navToggle.classList.add('main-header__toggle-anim-in');
+    navToggle.classList.remove('main-header__toggle-anim-out');
+  } else {
+    navMain.classList.add('main-nav--closed');
+    navMain.classList.remove('main-nav--opened');
+    navToggle.classList.add('main-header__toggle-anim-out');
+    navToggle.classList.remove('main-header__toggle-anim-in');
   }
-})(jQuery);
+});

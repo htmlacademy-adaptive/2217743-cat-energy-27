@@ -1,0 +1,165 @@
+.main-header {
+  padding: 0 20px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-bottom: 1px solid #cdcdcd;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 40px;
+    border-bottom: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px;
+  }
+}
+
+.main-header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 65px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 107px;
+    width: 174px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 169px;
+  }
+}
+
+.main-header__toggle {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-header__bar {
+  position: absolute;
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #000000;
+  left: 0;
+
+  &:first-child {
+    top: 0;
+  }
+
+  &:nth-child(2) {
+    top: 8px;
+  }
+
+  &:nth-child(3) {
+    top: 16px;
+  }
+}
+
+@keyframes burger-bar1 {
+  50% {
+    top: 8px;
+    transform: rotate(0);
+  }
+
+
+  100% {
+    top: 8px;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes burger-bar2 {
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes burger-bar3 {
+  50% {
+    top: 8px;
+    transform: rotate(0);
+  }
+
+
+  100% {
+    top: 8px;
+    transform: rotate(-45deg);
+  }
+}
+
+.main-header__toggle-anim-in .main-header__bar {
+  &:first-child {
+    animation: burger-bar1 200ms ease-in-out forwards;
+  }
+
+  &:nth-child(2) {
+    animation: burger-bar2 200ms ease-in-out forwards;
+  }
+
+  &:nth-child(3) {
+    animation: burger-bar3 200ms ease-in-out forwards;
+  }
+}
+
+@keyframes burger-bar1-out {
+  50% {
+    top: 8px;
+    transform: rotate(0);
+  }
+
+
+  100% {
+    top: 8px;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes burger-bar2-out {
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes burger-bar3-out {
+  50% {
+    top: 8px;
+    transform: rotate(0);
+  }
+
+
+  100% {
+    top: 8px;
+    transform: rotate(-45deg);
+  }
+}
+
+.main-header__toggle-anim-out .main-header__bar {
+  &:first-child {
+    animation: burger-bar1-out 200ms ease-in-out forwards;
+    animation-direction: reverse;
+  }
+
+  &:nth-child(2) {
+    animation: burger-bar2-out 200ms ease-in-out forwards;
+    animation-direction: reverse;
+  }
+
+  &:nth-child(3) {
+    animation: burger-bar3-out 200ms ease-in-out forwards;
+    animation-direction: reverse;
+  }
+}
