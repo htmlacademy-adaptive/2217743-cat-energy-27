@@ -1,0 +1,69 @@
+.number-background(@number, @right) {
+  &::before {
+    content: @number;
+    position: absolute;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 280px;
+    line-height: 280px;
+    color: #f2f2f2;
+    z-index: -1;
+    right: @right;
+    top: -40px;
+  }
+}
+
+.back-image(@image) {
+  background-image: @image;
+  background-repeat: no-repeat;
+  background-size: 60px 60px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    background-size: 80px 80px;
+  }
+}
+
+.svg-paddings(@top, @right, @bottom, @left) {
+  padding: @top @right @bottom @left;
+  background-color: #68b738;
+}
+
+.green-line-small() {
+  content: "";
+  height: 2px;
+  width: 4vw;
+  background-color: #68b738;
+  left: -70px;
+  position: absolute;
+  top: 22px;
+
+  @media (min-width: @desktop-width) {
+    left: -110px;
+    width: 5vw;
+  }
+}
+
+.green-line(@left, @top) {
+  content: "";
+  height: 2px;
+  width: 100%;
+  background-color: #68b738;
+  left: @left;
+  position: absolute;
+  top: @top;
+}
+
+.after-line(@bottom) {
+  content: "";
+  height: 1px;
+  width: 100vw;
+  left: -20px;
+  background-color: #d9d9d9;
+  position: absolute;
+  bottom: @bottom;
+
+  @media (min-width: @tablet-width) {
+    content: none;
+  }
+}

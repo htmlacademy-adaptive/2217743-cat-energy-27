@@ -1,36 +1,231 @@
+.example {
+  max-width: 1440px;
+  background-color: #eaeaea;
+  padding: 25px 19px 40px 20px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    background-color: #ffffff;
+    padding: 43px 30px 100px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 463px;
+      background-color: #eaeaea;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px;
+    display: grid;
+    grid-template-columns: 432px 560px;
+    justify-content: space-between;
+    row-gap: 83px;
+    background-color: transparent;
+    max-height: 600px;
+
+    &::before {
+      background-color: #f2f2f2;
+      z-index: -1;
+      width: 100vw;
+    }
+  }
+}
+
+.example__desktop-wrapper {
+  @media (min-width: @desktop-width) {
+    grid-column: 1 / 2;
+  }
+}
+
+.example__stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+
+  @media (min-width: @tablet-width) {
+    justify-content: normal;
+    flex-grow: 1;
+    gap: 42px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 124px 124px;
+    align-items: center;
+    justify-items: center;
+    margin-left: 19px;
+    gap: 80px;
+    margin-bottom: 35px;
+  }
+}
+
+.example__wrapper {
+  margin-bottom: 20px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 84px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+  }
+}
+
+.example__stats-item {
+  text-align: center;
+  position: relative;
+  width: 124px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: calc(100% - 2px);
+    height: 54px;
+    border: 1px solid #cdcdcd;
+    border-radius: 3px;
+    left: 0;
+    top: -13px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 162px;
+    height: 77px;
+
+    &::before {
+      height: 69px;
+      top: -14px;
+    }
+  }
+}
+
 .example__title {
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
   margin: 0;
+  margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 63px;
+  }
+}
+
+.example__description {
+  margin-bottom: 32px;
+
+  br {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 69px;
+
+    br {
+      display: block;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    br {
+      display: none;
+    }
+
+    margin-bottom: 85px;
+  }
 }
 
 .example__stats-title {
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .example__stats-text {
+  display: inline-block;
+  overflow-wrap: anywhere;
   font-family: @font-lato;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 12px;
   color: @dark-grey;
+  margin: 0 auto;
+  position: relative;
+  background-color: #eaeaea;
+  margin-top: 10px;
+  padding: 0 16px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+    background-color: #ffffff;
+    margin-top: 11px;
+    padding: 0 9px;
+
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: #f2f2f2;
+  }
 }
 
 .example__stats-expenses {
+  text-align: center;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
   margin: 0;
-}
 
-.example__picture-list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
+  br {
+    display: none;
+  }
 
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    text-align: end;
+    position: absolute;
+    right: 2px;
+    top: -9px;
+
+    br {
+      display: block;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    position: static;
+    text-align: start;
+
+    br {
+      display: none;
+    }
+
+    span {
+      margin-left: 61px;
+    }
+  }
+}
