@@ -144,11 +144,21 @@
   background-image: url("../img/arrow-button.svg");
   background-repeat: no-repeat;
   background-position: 99px 10px;
+  transition: 0.2s;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
     padding: 4px 57px 4px 0;
     background-position: 132px 13px;
+  }
+
+  &:hover {
+    background-position-x: 120px;
+  }
+
+  &:active {
+    transition: 0.1s;
+    opacity: 0.3;
   }
 }
