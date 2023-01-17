@@ -31,7 +31,7 @@ export const styles = async() => {
 
 const html = async() => {
   return gulp.src('source/*.html')
-  .pipe(htmlmin({collapseWhitespace: true}))
+  .pipe(htmlmin({collapseWhitespace: false}))
   .pipe(gulp.dest('build'));
   }
 
