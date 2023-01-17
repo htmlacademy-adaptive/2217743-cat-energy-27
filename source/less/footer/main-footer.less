@@ -13,13 +13,18 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 51px 110px 55px;
+    padding: 63px 110px;
   }
 
   .main-footer__logo img {
     width: 128px;
     height: 24px;
     transition: 0.2s;
+
+    @media (min-width: @tablet-width) {
+      width: 143px;
+      height: 26px;
+    }
 
     &:hover {
       opacity: 0.8;
@@ -33,7 +38,7 @@
 
 .main-footer__line-first {
   width: 100%;
-  margin: 29px 0 18px;
+  margin: 13px 0 18px;
   color: rgba(217, 217, 217, 1);
 
   @media (min-width: @tablet-width) {
