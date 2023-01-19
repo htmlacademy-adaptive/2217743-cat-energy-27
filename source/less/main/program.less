@@ -42,7 +42,7 @@
   }
 }
 
-.program__weight-loss {
+.program__weight--loss {
   background-image: url("../img/cat-back.svg");
   background-repeat: no-repeat;
   background-position: 22px 21px;
@@ -58,14 +58,15 @@
   }
 }
 
-.program__weight-up {
+.program__weight--up {
   background-image: url("../img/cat-back-2.svg");
   background-repeat: no-repeat;
   background-position: 13px 24px;
 
   @media (min-width: @tablet-width) {
     background-size: 268px 200px;
-    background-position: calc(100% - 63px);
+    background-position-x: calc(100% - 30px);
+    background-position-y: center;
   }
 
   @media (min-width: @desktop-width) {

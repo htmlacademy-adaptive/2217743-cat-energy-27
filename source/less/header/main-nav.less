@@ -42,6 +42,7 @@
 
 .main-nav--nojs .main-nav__list {
   display: block;
+  position: static;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -104,7 +105,7 @@
       }
     }
 
-    &-current {
+    &--current {
       &::after {
         content: "";
         width: 100%;
@@ -157,13 +158,13 @@
       transition: 0.3s;
     }
 
-    &:hover:not(.main-nav__item-current) {
+    &:hover:not(.main-nav__item--current) {
       &::after {
         scale: 1;
       }
     }
 
-    &-current {
+    &--current {
       position: relative;
 
       &::after {

@@ -108,19 +108,19 @@
   }
 }
 
-.profile__item-water {
+.profile__addition-item--water {
   @media (min-width: @desktop-width) {
     margin-left: 104px;
   }
 }
 
-.profile__item-milk {
+.profile__addition-item--milk {
   @media (min-width: @desktop-width) {
     margin-left: 138px;
   }
 }
 
-.profile__item-vitamin {
+.profile__addition-item--vitamin {
   @media (min-width: @desktop-width) {
     margin-left: 198px;
   }
@@ -226,7 +226,7 @@
   }
 }
 
-.profile__wrapper .profile__item {
+.profile__list--first label {
   display: flex;
   align-items: center;
   gap: 13px;
@@ -256,7 +256,7 @@
   }
 }
 
-.profile__type-field {
+.profile__type {
   font-family: "Oswald", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -301,12 +301,12 @@
   }
 }
 
-.profile__list-first label,
+.profile__list--first label,
 .profile__address label {
   width: 100%;
 }
 
-.profile__wrapper-field {
+.profile__type--field {
   padding: 14px 20px 13px;
 
   @media (min-width: @tablet-width) {
@@ -314,7 +314,7 @@
   }
 }
 
-.profile__field-comment {
+.profile__type--comment {
   resize: none;
   width: 100%;
   height: 150px;
@@ -344,7 +344,7 @@
   position: relative;
 }
 
-.profile__list-first {
+.profile__list--first {
   @media (min-width: @tablet-width) {
     gap: 20px;
     margin-bottom: 25px;
@@ -356,7 +356,7 @@
   }
 }
 
-.profile__list-second {
+.profile__list--second {
   @media (min-width: @tablet-width) {
     gap: 13px;
     border: 1px solid #e7e7e7;
@@ -364,15 +364,15 @@
   }
 }
 
-.profile__list-first::after {
+.profile__list--first::after {
   .after-line(-24px);
 }
 
-.profile__list-second::after {
+.profile__list--second::after {
   .after-line(-17px);
 }
 
-.profile__field-mail {
+.profile__type--mail {
   padding: 14px 49px 14px 13px;
   background-image: url("../img/form/email-svg.svg");
   background-repeat: no-repeat;
@@ -388,7 +388,7 @@
   }
 }
 
-.profile__field-phone {
+.profile__type--phone {
   padding: 14px 68px 14px 15px;
   background-image: url("../img/form/phone-svg.svg");
   background-repeat: no-repeat;
@@ -414,7 +414,7 @@
   display: none;
 }
 
-.profile__list-second label {
+.profile__list--second label {
   display: flex;
   gap: 12px;
   align-items: center;
