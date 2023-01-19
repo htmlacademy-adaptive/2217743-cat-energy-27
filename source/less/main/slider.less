@@ -1,5 +1,5 @@
 .slider {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
   overflow: hidden;
@@ -7,17 +7,14 @@
   width: 280px;
   height: 256px;
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @media (min-width: @tablet-width) {
     width: 560px;
     height: 512px;
   }
-}
-
-.example__picture {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
   @media (min-width: @desktop-width) {
     grid-column: 2 / 3;
@@ -26,7 +23,9 @@
   }
 }
 
-.example__picture-item {
+
+
+.slider__picture-item {
   position: absolute;
   top: 0;
   left: 0;
